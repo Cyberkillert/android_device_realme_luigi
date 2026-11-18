@@ -1,32 +1,57 @@
+
 #
 # Copyright (C) 2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
+# Architecture
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-TARGET_SUPPORTS_OMX_SERVICE := false
+
+# Telephony
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
+
+# AxionFX
+TARGET_INCLUDE_AXFX := true
+
+# Camera information
+AXION_CAMERA_REAR_INFO := 108,2
+AXION_CAMERA_FRONT_INFO := 16
+
+# Maintainer information
+AXION_MAINTAINER := CYBER
+
+# Processor information
+AXION_PROCESSOR := Snapdragon_695
+
+# AxionOS configuration
+TARGET_DISABLE_EPPE := true
+
+# Display blur
+TARGET_ENABLE_BLUR := true
+
+
+# Inherit common LineageOS configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from luigi device
+# Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_luigi
+# Device identification
+PRODUCT_NAME := Lineage_luigi
 PRODUCT_DEVICE := luigi
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3660
 PRODUCT_MANUFACTURER := realme
 
+# Google client ID
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
+# Stock firmware identity
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="RE588BL1-user 14 UKQ1.230924.001 T.R4T2.1caa532_b7c7-14104c release-keys" \
-    BuildFingerprint=realme/RMX3660/RE588BL1:14/UKQ1.230924.001/T.R4T2.1caa532_b7c7-14104c:user/release-keys \
+    BuildDesc="YOUR_ACTUAL_STOCK_BUILD_DESCRIPTION" \
+    BuildFingerprint=YOUR_ACTUAL_STOCK_BUILD_FINGERPRINT \
     DeviceName=RE588BL1 \
     DeviceProduct=RE588BL1 \
     SystemDevice=RE588BL1 \
