@@ -22,6 +22,19 @@ PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3660
 PRODUCT_MANUFACTURER := realme
 
+# Infinity X
+ro.infinity.soc=Snapdragon 695
+ro.infinity.battery=5000 mAh
+ro.infinity.display=1080x2400, 120 Hz
+ro.infinity.camera=108MP + 2MP + 16M
+ro.product.marketname=Realme 10 pro
+
+# Infinity-X Flags
+INFINITY_MAINTAINER := CYBER
+WITH_GAPPS := false
+
+
+
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
