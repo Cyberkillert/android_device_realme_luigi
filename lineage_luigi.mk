@@ -24,6 +24,9 @@ PRODUCT_MANUFACTURER := realme
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
+
+ro.lunaris.maintainer=CYBER
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="RE588BL1-user 14 UKQ1.230924.001 T.R4T2.1caa532_b7c7-14104c release-keys" \
     BuildFingerprint=realme/RMX3660/RE588BL1:14/UKQ1.230924.001/T.R4T2.1caa532_b7c7-14104c:user/release-keys \
